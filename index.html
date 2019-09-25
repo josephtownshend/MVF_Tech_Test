@@ -21,7 +21,8 @@
           language[count] = (++language[count] || 1);
           return language;
         }
-        console.log(primaryLanguages.reduce(countLanguages, {}));
+        const primaryLanguageCount = primaryLanguages.reduce(countLanguages, {});
+        console.log(primaryLanguageCount);
       });
 
 
