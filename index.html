@@ -16,7 +16,15 @@
           return language.language;
         })
         console.log(primaryLanguages)
+
+        function countLanguages(language, count) {
+          language[count] = (++language[count] || 1);
+          return language;
+        }
+        console.log(primaryLanguages.reduce(countLanguages, {}));
       });
+
+
 
 
       </script>
