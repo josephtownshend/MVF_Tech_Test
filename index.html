@@ -17,19 +17,20 @@
     </form>
 
     <p id ="result"></p>
-
     <p id="faveLanguage"></p>
 
     <script>
 
-      var form = document.getElementById('name-form');
-      form.onsubmit = function(e) {
-        e.preventDefault();
-        var result = document.getElementById('result');
+      let form = document.getElementById('name-form');
+      form.onsubmit = function(event) {
+        event.preventDefault();
+        let result = document.getElementById('result');
         result.innerHTML = form.fullName.value;
-        this.reset();
-      };
 
+        // this.reset();
+        let name = form.fullName.value
+        console.log(name)
+      };
 
       const url = 'https://api.github.com/users/josephtownshend/repos'
 
@@ -45,12 +46,13 @@
         language[count] = (++language[count] || 1);
         return language;
       }
+
       const primaryLanguageCount = primaryLanguages.reduce(countLanguages, {});
       console.log(primaryLanguageCount);
 
       let arrCount = Object.values(primaryLanguageCount);
 
-      var largestCount = Math.max.apply(Math, arrCount);
+      let largestCount = Math.max.apply(Math, arrCount);
 
       for (let value in primaryLanguageCount) {
         let key = primaryLanguageCount[value];
