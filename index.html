@@ -30,7 +30,7 @@
         let name = form.fullName.value
         console.log(name)
 
-              const url = 'https://api.github.com/users/josephtownshend/repos'
+              const url = 'https://api.github.com/users/'+name+'/repos';
 
               fetch(url)
               .then((response) => response.json())
