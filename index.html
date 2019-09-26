@@ -16,10 +16,15 @@
       </p>
     </form>
 
-
-
     <script>
 
+      var form = document.getElementById('name-form');
+      form.onsubmit = function(e) {
+        e.preventDefault();
+        console.log(form.fullName.value);
+        form.reset();
+
+      };
 
 
       const url = 'https://api.github.com/users/josephtownshend/repos'
