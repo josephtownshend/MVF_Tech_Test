@@ -16,12 +16,15 @@
       </p>
     </form>
 
+    <p id ="result"></p>
+
     <script>
 
       var form = document.getElementById('name-form');
       form.onsubmit = function(e) {
         e.preventDefault();
-        console.log(form.fullName.value);
+        var result = document.getElementById('result');
+        result.innerHTML = form.fullName.value;
         form.reset();
 
       };
