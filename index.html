@@ -12,23 +12,33 @@
       fetch(url)
       .then((response) => response.json())
       .then(function(data) {
-        const primaryLanguages = data.map(function(language) {
-          return language.language;
-        })
-        console.log(primaryLanguages)
+      const primaryLanguages = data.map(function(language) {
+        return language.language;
+      })
+      console.log(primaryLanguages)
 
-        function countLanguages(language, count) {
-          language[count] = (++language[count] || 1);
-          return language;
+      function countLanguages(language, count) {
+        language[count] = (++language[count] || 1);
+        return language;
+      }
+      const primaryLanguageCount = primaryLanguages.reduce(countLanguages, {});
+      console.log(primaryLanguageCount);
+
+      let arrCount = Object.values(primaryLanguageCount);
+
+      var largestCount = Math.max.apply(Math, arrCount);
+
+      for (let value in primaryLanguageCount) {
+        let key = primaryLanguageCount[value];
+          if (key == largestCount)
+          console.log(value);
         }
-        const primaryLanguageCount = primaryLanguages.reduce(countLanguages, {});
-        console.log(primaryLanguageCount);
-      });
+    });
 
 
 
 
-      </script>
+    </script>
 
   </body>
 </html>
