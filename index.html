@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Favourite langauge</title>
   </head>
   <body>
 
@@ -18,15 +18,16 @@
 
     <p id ="result"></p>
 
+    <p id="faveLanguage"></p>
+
     <script>
 
       var form = document.getElementById('name-form');
       form.onsubmit = function(e) {
         e.preventDefault();
         var result = document.getElementById('result');
-        result.innerHTML = form.fullName.value;
-        form.reset();
-
+        result.innerHTML = form.fullName.value + "'s favourite language is...";
+        this.reset();
       };
 
 
@@ -55,7 +56,13 @@
         let key = primaryLanguageCount[value];
           if (key == largestCount)
           console.log(value);
+          // var faveLanguage = document.getElementById('faveLanguage');
+          // faveLanguage.innerHTML = value;
         }
+
+
+
+
     });
 
 
