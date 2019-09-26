@@ -21,3 +21,7 @@ From here I have reduced the array to a hash and counted each language entry and
 ```
 {Elixir: 1, HTML: 1, Java: 4, JavaScript: 2, Python: 1, Ruby: 16, Shell: 1, null: 4}
 ```
+
+### Thursday
+
+Made some good progress today - despite spending a long time trying to figure out how to return the highest value from the languages hash. Got a form working and returning the submitted name - so now I think I need to take that input and interpolate it with the API endpoint so as to access the usernames repos. I then need to take the returned favourite language and get it showing up on the page. Neither of these two tasks sound particularly complicated, so I feel hopeful I can get this done tomorrow. 
