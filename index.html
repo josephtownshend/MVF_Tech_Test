@@ -15,9 +15,8 @@
         <input type="submit" value="Submit">
       </p>
     </form>
-
     <p id ="result"></p>
-    <p id="faveLanguage"></p>
+    <p id ="faveLanguage"></p>
 
     <script>
 
@@ -30,49 +29,40 @@
         // this.reset();
         let name = form.fullName.value
         console.log(name)
-      };
 
-      const url = 'https://api.github.com/users/josephtownshend/repos'
+              const url = 'https://api.github.com/users/josephtownshend/repos'
 
-      fetch(url)
-      .then((response) => response.json())
-      .then(function(data) {
-      const primaryLanguages = data.map(function(language) {
-        return language.language;
-      })
-      console.log(primaryLanguages)
+              fetch(url)
+              .then((response) => response.json())
+              .then(function(data) {
+              const primaryLanguages = data.map(function(language) {
+                return language.language;
+              })
+              // console.log(primaryLanguages)
 
-      function countLanguages(language, count) {
-        language[count] = (++language[count] || 1);
-        return language;
-      }
+              function countLanguages(language, count) {
+                language[count] = (++language[count] || 1);
+                return language;
+              }
 
-      const primaryLanguageCount = primaryLanguages.reduce(countLanguages, {});
-      console.log(primaryLanguageCount);
+              const primaryLanguageCount = primaryLanguages.reduce(countLanguages, {});
+              console.log(primaryLanguageCount);
 
-      let arrCount = Object.values(primaryLanguageCount);
+              let arrCount = Object.values(primaryLanguageCount);
 
-      let largestCount = Math.max.apply(Math, arrCount);
+              let largestCount = Math.max.apply(Math, arrCount);
 
-      for (let value in primaryLanguageCount) {
-        let key = primaryLanguageCount[value];
-          if (key == largestCount)
-          console.log(value);
-          // var faveLanguage = document.getElementById('faveLanguage');
-          // faveLanguage.innerHTML = value;
-        }
+              for (let value in primaryLanguageCount) {
+                let key = primaryLanguageCount[value];
+                  if (key == largestCount)
+                  console.log(value);
 
-
-
-
-    });
-
-
-
+                  let faveLanguage = document.getElementById('faveLanguage');
+                  faveLanguage.innerHTML = value;
+                }
+      });
+    };
 
     </script>
-
-
-
   </body>
 </html>
