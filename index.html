@@ -54,11 +54,12 @@
 
             for (let value in primaryLanguageCount) {
               let key = primaryLanguageCount[value];
-                if (key == largestCount)
-                console.log(value);
-
+                if (key == largestCount) {
                 let faveLanguage = document.getElementById('faveLanguage');
                 faveLanguage.innerHTML = value;
+                console.log(value);
+              }
+
               }
       });
     };
