@@ -31,3 +31,9 @@ Made some good progress today - despite spending a long time trying to figure ou
 Managed to get the string interpolation working for the submitted username and the GitHub api endpoint - the can now console.log the inputted users favourite language.
 
 ![screenshot of console.log after username has been entered](https://github.com/josephtownshend/MVF_Tech_Test/blob/master/images/Screenshot_2.jpg)
+
+### Friday
+
+Application is now returning the users favourite programming language. However it errors if the username is incorrect and it has no logic to deal with scenario if 2+ languages have the same count.
+
+![screenshot of page after username has been submitted](https://github.com/josephtownshend/MVF_Tech_Test/blob/master/images/Screenshot_3.jpg)
