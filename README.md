@@ -34,6 +34,8 @@ Managed to get the string interpolation working for the submitted username and t
 
 ### Friday
 
-Application is now returning the users favourite programming language. However it errors if the username is incorrect and it has no logic to deal with scenario if 2+ languages have the same count.
+Application is now returning the users favourite programming language. However it errors if the username is incorrect and it has no logic to deal with scenario if 2+ languages have the same count, which despite not causing an error isn't an accurate return.
 
 ![screenshot of page after username has been submitted](https://github.com/josephtownshend/MVF_Tech_Test/blob/master/images/Screenshot_3.jpg)
+
+I also extracted the script out of the main.html file and into it's own file/folder. At this point I feel quite happy with my progress, I am keen to fix the two issues mentioned previously and possibly if I have time to rebuild with testing.
