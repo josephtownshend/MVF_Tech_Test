@@ -28,7 +28,7 @@ Made some good progress today - despite spending a long time trying to figure ou
 
 ### Thursday evening
 
-Managed to get the string interpolation working for the submitted username and the GitHub api endpoint - the can now console.log the inputted users favourite language.
+Managed to get the string interpolation working for the submitted username and the GitHub api endpoint - the can now console.log the inputted user's favourite language.
 
 ![screenshot of console.log after username has been entered](https://github.com/josephtownshend/MVF_Tech_Test/blob/master/images/Screenshot_2.jpg)
 
