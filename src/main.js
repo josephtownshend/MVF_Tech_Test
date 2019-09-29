@@ -4,7 +4,7 @@ window.onload = function() {
   form.onsubmit = function(event) {
     event.preventDefault();
     let result = document.getElementById('result');
-    result.innerHTML = form.fullName.value;
+    // result.innerHTML = form.fullName.value;
     let name = form.fullName.value
     this.reset();
 
